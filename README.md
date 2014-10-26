@@ -1,2 +1,3 @@
 HemiAndTama
 ===========
+This will be a game set in a model of the hamster home. It will be multiplayer with each player being a hamster. Goals could include, run km in hamster wheel, push opponents out of the wheel. Collecting gold stars from the food bowls before opponent. Perhaps there needs to be a couch with shark and dolphin, which can be thrown through the tubes which pushes anyone in the tube along till they are out of the tube. Extras would be climb through the top door and climb into the hamstercopter, which starts an old style platform game. Exiting via the bottom door and getting into the hamster submarine, which starts an old style platform game in the fishtank. Etc. And apparently we also need lemurs in the game.
