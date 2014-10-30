@@ -416,8 +416,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: .400000006
-  m_SlopeLimit: 45
-  m_StepOffset: .400000006
+  m_SlopeLimit: .100000001
+  m_StepOffset: .100000001
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
@@ -1501,6 +1501,14 @@ Prefab:
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalScale.z
       value: .00999999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_SlopeLimit
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_StepOffset
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
