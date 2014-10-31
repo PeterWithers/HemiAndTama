@@ -13,11 +13,14 @@ public class HamsterWheel : MonoBehaviour {
 	}
 
 	void Update() {
-		momentum = (momentum > 0)? momentum - decay : 0;
-		//Debug.Log ("momentum: " + momentum);
+		momentum = (momentum > 0)? momentum - decay : momentum + decay;
 		transform.Rotate(Vector3.back, Time.deltaTime * momentum);
 	}
 
 	void FixedUpdate() {
+	}
+
+	void OnGUI() {
+		GUI.Label(new Rect(10, 10, 100, 20), "momentum: " + momentum);
 	}
 }
