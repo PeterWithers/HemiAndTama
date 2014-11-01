@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class HamsterPlayer : MonoBehaviour {
-	public float proximityLimit = -1.5; // depth the player must be inside the wheel to act on it
+	public float proximityLimit = -1.5f; // depth the player must be inside the wheel to act on it
 
 	// Use this for initialization
 	void Start () {
