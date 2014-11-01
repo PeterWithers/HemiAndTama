@@ -6,10 +6,11 @@ public class HamsterWheel : MonoBehaviour {
 	float momentum = 50f;
 	float decay = 0.5f;
 
-	public void setSpeed(float speed) {
+	public float setSpeed(float speed) {
 		// speed is a value from -1 to 1 where 0 is stationary
 		print ("speed: " + speed);
 		momentum = maxSpeed * speed;
+		return momentum / maxSpeed;
 	}
 
 	void Update() {
