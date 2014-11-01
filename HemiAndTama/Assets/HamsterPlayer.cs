@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class HamsterPlayer : MonoBehaviour {
+	public float proximityLimit = -1.5; // depth the player must be inside the wheel to act on it
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,8 @@ public class HamsterPlayer : MonoBehaviour {
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
-		if (hit.gameObject.name == "HamsterWheel") {			
+		if (hit.gameObject.name == "HamsterWheel") {		
+			// todo: this distance calculation could be done with a simple comparison on the width axis
 			var distance = Vector3.Distance (hit.transform.position, transform.position);
 			print("distance: " + distance);
 
@@ -23,7 +25,7 @@ public class HamsterPlayer : MonoBehaviour {
 			float yDiff = hit.transform.position.y - transform.position.y;
 			float zDiff = hit.transform.position.z - transform.position.z;
 
-			if(distance<3 && xDiff > -1.5){				
+			if(distance<3 && xDiff > proximityLimit){				
 				// todo: the -zDiff should be addative to the wheel movement and this should also reflect the force back on the player so that it can oscilate if the player suddenly stops pushing
 				// set the wheel in motion
 				float wheelSpeed = hit.gameObject.GetComponentInChildren<HamsterWheel>().setSpeed(-zDiff);
