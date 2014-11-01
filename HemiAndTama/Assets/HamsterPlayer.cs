@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HamsterPlayer : MonoBehaviour {
 	public float proximityLimit = -1.5f; // depth the player must be inside the wheel to act on it
-
+	private int starCount = 0;
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +15,13 @@ public class HamsterPlayer : MonoBehaviour {
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
+
+		if (hit.gameObject.name == "star(Clone)") {
+			starCount++;
+			Destroy(hit.gameObject);
+			//StarSpawn starSpawn = GetComponent<StarSpawn>();
+			//starSpawn.spawnStar();
+		}
 		if (hit.gameObject.name == "HamsterWheel") {		
 			// todo: this distance calculation could be done with a simple comparison on the width axis
 			var distance = Vector3.Distance (hit.transform.position, transform.position);
@@ -46,5 +53,8 @@ public class HamsterPlayer : MonoBehaviour {
 			print("diff y: " + yDiff);
 			print("diff z: " + zDiff);
 		}
+	}
+	void OnGUI() {
+		GUI.Label(new Rect(10, 70, 100, 20), "stars: " + starCount);
 	}
 }
