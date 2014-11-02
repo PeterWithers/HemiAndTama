@@ -4,9 +4,11 @@ using System.Collections;
 public class HamsterPlayer : MonoBehaviour {
 	public float proximityLimit = -1.5f; // depth the player must be inside the wheel to act on it
 	private int starCount = 0;
+	private float tubeSpeedRms = 0;
+	CharacterController controller;
 	// Use this for initialization
 	void Start () {
-	
+		controller = GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +23,9 @@ public class HamsterPlayer : MonoBehaviour {
 			Destroy(hit.gameObject);
 			//StarSpawn starSpawn = GetComponent<StarSpawn>();
 			//starSpawn.spawnStar();
+		}
+		if (hit.gameObject.name == "tube container") {
+			tubeSpeedRms = Mathf.Sqrt(tubeSpeedRms + controller.velocity.magnitude / 2);
 		}
 		if (hit.gameObject.name == "HamsterWheel") {		
 			// todo: this distance calculation could be done with a simple comparison on the width axis
@@ -55,6 +60,8 @@ public class HamsterPlayer : MonoBehaviour {
 		}
 	}
 	void OnGUI() {
-		GUI.Label(new Rect(10, 70, 100, 20), "stars: " + starCount);
+		GUI.Label(new Rect(10, 70, 120, 20), "stars: " + starCount);
+		GUI.Label(new Rect(10, 90, 150, 20), "tubeSpeedRms: " + tubeSpeedRms);
+		GUI.Label(new Rect(10, 120, 120, 20), "speed: " + controller.velocity.magnitude);
 	}
 }
