@@ -5,10 +5,12 @@ public class HamsterPlayer : MonoBehaviour {
 	public float proximityLimit = -1.5f; // depth the player must be inside the wheel to act on it
 	private int starCount = 0;
 	private float tubeSpeedRms = 0;
-	CharacterController controller;
+	private CharacterController controller;
+	private HamsterWheel hamsterWheel;
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
+		hamsterWheel = GameObject.Find("HamsterWheel").GetComponentInChildren<HamsterWheel>();
 	}
 	
 	// Update is called once per frame
@@ -30,7 +32,7 @@ public class HamsterPlayer : MonoBehaviour {
 		if (hit.gameObject.name == "HamsterWheel") {		
 			// todo: this distance calculation could be done with a simple comparison on the width axis
 			var distance = Vector3.Distance (hit.transform.position, transform.position);
-			print("distance: " + distance);
+			//print("distance: " + distance);
 
 			
 			float xDiff = hit.transform.position.x - transform.position.x;
@@ -44,7 +46,6 @@ public class HamsterPlayer : MonoBehaviour {
 				// move the player in relation to the force they have put on the wheel
 				//Vector3 restPosition = new Vector3(transform.position.x, transform.position.y, hit.transform.position.z);
 				Vector3 restMovement = new Vector3(0, 0, zDiff * 0.5f);
-				CharacterController controller = GetComponent<CharacterController>();
 				controller.Move(restMovement * Time.deltaTime);
 			}
 			//print("hit x: " + hit.transform.position.x);
@@ -54,14 +55,15 @@ public class HamsterPlayer : MonoBehaviour {
 			//print("player y: " + transform.position.y);
 			//print("player z: " + transform.position.z);
 
-			print("diff x: " + xDiff);
-			print("diff y: " + yDiff);
-			print("diff z: " + zDiff);
+			//print("diff x: " + xDiff);
+			//print("diff y: " + yDiff);
+			//print("diff z: " + zDiff);
 		}
 	}
 	void OnGUI() {
-		GUI.Label(new Rect(10, 70, 120, 20), "stars: " + starCount);
-		GUI.Label(new Rect(10, 90, 150, 20), "tubeSpeedRms: " + tubeSpeedRms);
-		GUI.Label(new Rect(10, 120, 120, 20), "speed: " + controller.velocity.magnitude);
+		GUI.Label(new Rect(150, 5, 120, 20), "stars: " + starCount);
+		GUI.Label(new Rect(300, 5, 150, 20), "tubeSpeedRms: " + tubeSpeedRms);
+		GUI.Label(new Rect(450, 5, 120, 20), "speed: " + controller.velocity.magnitude);
+		GUI.Label (new Rect (10, 5, 100, 20), "wheel: " + (int)hamsterWheel.getMomentum());
 	}
 }

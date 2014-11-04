@@ -8,9 +8,13 @@ public class HamsterWheel : MonoBehaviour {
 
 	public float setSpeed(float speed) {
 		// speed is a value from -1 to 1 where 0 is stationary
-		print ("speed: " + speed);
+		//print ("speed: " + speed);
 		momentum = maxSpeed * speed;
 		return momentum / maxSpeed;
+	}
+
+	public float getMomentum() {
+		return momentum;
 	}
 
 	void Update() {
@@ -21,7 +25,7 @@ public class HamsterWheel : MonoBehaviour {
 	void FixedUpdate() {
 	}
 
-	void OnGUI() {
-		GUI.Label(new Rect(10, 10, 100, 20), "momentum: " + momentum);
-	}
+	//void OnGUI() {
+	//	GUI.Label (new Rect (5, 5, 150, 20), "momentum: " + (int)momentum);
+	//}
 }
