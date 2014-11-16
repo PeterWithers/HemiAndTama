@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class StarSpawn : MonoBehaviour {
-	public GameObject[] starSpawnPoints;
+	private GameObject[] starSpawnPoints;
 	public GameObject starPrefab;
 	void Start () {
-		//starSpawnPoints = GameObject.FindObjectsOfType<StarSpawnPoint> ();
+		starSpawnPoints = GameObject.FindGameObjectsWithTag("StarSpawnPoint");
 		//starSpawnPoints = GameObject.FindObjectsOfType<StarSpawnPoint>();
 		//starSpawnPoints = GetComponentsInChildren<StarSpawnPoint>();
 		//starPrefab = GameObject.FindObjectOfType<Star> ();

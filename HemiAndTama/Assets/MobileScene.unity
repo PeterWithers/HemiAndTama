@@ -362,6 +362,50 @@ Transform:
   - {fileID: 1479138584}
   m_Father: {fileID: 85263401}
   m_RootOrder: 0
+--- !u!1001 &67044827
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1505144235}
+    m_Modifications:
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .637584925
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.8895988
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.5644989
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_RootGameObject: {fileID: 427226692}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &85263400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1270,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 775759907}
   m_RootOrder: 0
+--- !u!1 &427226692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_PrefabInternal: {fileID: 67044827}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 427226693}
+  m_Layer: 0
+  m_Name: StarSpawnPoint
+  m_TagString: StarSpawnPoint
+  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &427226693
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_PrefabInternal: {fileID: 67044827}
+  m_GameObject: {fileID: 427226692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .637584925, y: -11.8895988, z: 6.5644989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1505144235}
+  m_RootOrder: 2
 --- !u!1001 &448620574
 Prefab:
   m_ObjectHideFlags: 0
@@ -1353,6 +1424,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eadf4ea6d245e40bdaff790deec8f669, type: 2}
   m_RootGameObject: {fileID: 569832757}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &477942187
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1505144235}
+    m_Modifications:
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.14391136
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.8895988
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.5644989
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_RootGameObject: {fileID: 858021734}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &497850414
@@ -2696,6 +2811,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1526779853}
   m_GameObject: {fileID: 724997483}
   m_Mesh: {fileID: 4300000, guid: d3f84c6ee1f0c43b5b58283c65e9a878, type: 3}
+--- !u!1001 &773843019
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1505144235}
+    m_Modifications:
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.88405204
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -11.8895988
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.5644989
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_RootGameObject: {fileID: 1650259465}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &775759906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3155,14 +3314,14 @@ Prefab:
 --- !u!1 &858021734
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_PrefabInternal: {fileID: 477942187}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 858021735}
   m_Layer: 0
   m_Name: StarSpawnPoint
-  m_TagString: Untagged
+  m_TagString: StarSpawnPoint
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3170,11 +3329,11 @@ GameObject:
 --- !u!4 &858021735
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabParentObject: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_PrefabInternal: {fileID: 477942187}
   m_GameObject: {fileID: 858021734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .637585104, y: -11.8895988, z: 6.5644989}
+  m_LocalPosition: {x: -8.14391136, y: -11.8895988, z: 6.5644989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1505144235}
@@ -4084,33 +4243,6 @@ Prefab:
   m_RootGameObject: {fileID: 2093318604}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1193486580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1193486581}
-  m_Layer: 0
-  m_Name: StarSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1193486581
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1193486580}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.25349402, y: -11.8895988, z: 6.5644989}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1505144235}
-  m_RootOrder: 1
 --- !u!1001 &1236309109
 Prefab:
   m_ObjectHideFlags: 0
@@ -5192,11 +5324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a58341a5150344fca7ef094ceaf125a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starSpawnPoints:
-  - {fileID: 858021734}
-  - {fileID: 1193486580}
-  - {fileID: 858021734}
-  - {fileID: 1193486580}
   starPrefab: {fileID: 100000, guid: 42f25bdc9447f44a493df164607644a3, type: 2}
 --- !u!4 &1505144235
 Transform:
@@ -5209,7 +5336,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 858021735}
-  - {fileID: 1193486581}
+  - {fileID: 1650259466}
+  - {fileID: 427226693}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1001 &1526779853
@@ -5598,6 +5726,33 @@ Transform:
   - {fileID: 1547858034}
   m_Father: {fileID: 1787595837}
   m_RootOrder: 0
+--- !u!1 &1650259465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_PrefabInternal: {fileID: 773843019}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1650259466}
+  m_Layer: 0
+  m_Name: StarSpawnPoint
+  m_TagString: StarSpawnPoint
+  m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1650259466
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: fe839dd609cb2495b9d3bb9c0c418f08, type: 2}
+  m_PrefabInternal: {fileID: 773843019}
+  m_GameObject: {fileID: 1650259465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.88405204, y: -11.8895988, z: 6.5644989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1505144235}
+  m_RootOrder: 1
 --- !u!1001 &1666050905
 Prefab:
   m_ObjectHideFlags: 0
