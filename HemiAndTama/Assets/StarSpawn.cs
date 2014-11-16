@@ -2,14 +2,20 @@
 using System.Collections;
 
 public class StarSpawn : MonoBehaviour {
-	public Transform starPrefab;
-
+	public GameObject[] starSpawnPoints;
+	public GameObject starPrefab;
 	void Start () {
+		//starSpawnPoints = GameObject.FindObjectsOfType<StarSpawnPoint> ();
+		//starSpawnPoints = GameObject.FindObjectsOfType<StarSpawnPoint>();
+		//starSpawnPoints = GetComponentsInChildren<StarSpawnPoint>();
+		//starPrefab = GameObject.FindObjectOfType<Star> ();
 		spawnStar ();
 	}
 
 	public void spawnStar() {
-		Rigidbody clone = Instantiate(starPrefab, transform.position, transform.rotation) as Rigidbody;
+		for (int pointIndex = 0; pointIndex < starSpawnPoints.Length; pointIndex++){
+			Rigidbody clone = Instantiate(starPrefab, starSpawnPoints[pointIndex].transform.position, starSpawnPoints[pointIndex].transform.rotation) as Rigidbody;
+		}
 		//var respawn = GameObject.FindWithTag ("StarSpawn");
 		//Instantiate (starPrefab, respawn.transform.position, respawn.transform.rotation);
 	}
