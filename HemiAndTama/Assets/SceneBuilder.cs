@@ -1,41 +1,37 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class SceneBuilder : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		Transform spawnPoint = transform;
-		TextAsset gameLevelTxt= Resources.Load("gamelevel") as TextAsset;
-		Debug.Log(gameLevelTxt.text);
-
-		//string[] lines = System.IO.File.ReadAllLines(file);
-		//foreach (string line in lines){
-		if (gameLevelTxt.text.StartsWith("B")){
-				//Rigidbody clone = Instantiate(starPrefab, spawnPoint.position, spawnPoint.rotation) as Rigidbody;
-				//spawnPoint = clone.transform;	
-//			GameObject instance = Instantiate(Resources.Load("Base", typeof(GameObject)));
-			GameObject instance = Instantiate(Resources.Load<GameObject>("Base")) as GameObject;
-			print("B");
-		} else if (gameLevelTxt.text.StartsWith("M")){
-			print("M");
-		} else if (gameLevelTxt.text.StartsWith("L")){
-			print("L");
-		} else if (gameLevelTxt.text.StartsWith("T")){
-			print("T");
-		} else if (gameLevelTxt.text.StartsWith("I")){
-			print("I");
-			}
-/*		for (int i = 0; i < lines.Length; i++)  {
-			string[] stringsOfLine = Regex.Split(lines[i], " ");
-			levelBase[i] = stringsOfLine;
-		}
-		return levelBase;
-*/
+    // Use this for initialization
+    void Start () {
+    	Transform spawnPoint = transform;
+    	TextAsset gameLevelTxt = Resources.Load ("gamelevel") as TextAsset;
+    	Debug.Log (gameLevelTxt.text);
+    	int textIndex = 0;
+    	while (textIndex < gameLevelTxt.text.Length) {
+            if (gameLevelTxt.text [textIndex] == 'B') {
+                spawnPoint = instantiateGameObject ("Base", spawnPoint);
+            } else if (gameLevelTxt.text [textIndex] == 'M') {
+                spawnPoint = instantiateGameObject ("mezzanine", spawnPoint);
+            } else if (gameLevelTxt.text [textIndex] == 'L') {
+                spawnPoint = instantiateGameObject ("Tube 90 container", spawnPoint);
+            } else if (gameLevelTxt.text [textIndex] == 'T') {
+                spawnPoint = instantiateGameObject ("Tee tube", spawnPoint);
+            } else if (gameLevelTxt.text [textIndex] == 'I') {
+                spawnPoint = instantiateGameObject ("Tube container", spawnPoint);
+            }
+            textIndex++;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
+
+    private Transform instantiateGameObject (string name, Transform spawnPoint)
+    {
+    	print (name);
+	GameObject instance = Instantiate (Resources.Load<GameObject> (name), spawnPoint.position, spawnPoint.rotation) as GameObject;
+	return spawnPoint; //instance.GetComponentsInChildren<ConnectorPoint>().;
+    }
+
+// Update is called once per frame
+    void Update () {
+    }
 }
