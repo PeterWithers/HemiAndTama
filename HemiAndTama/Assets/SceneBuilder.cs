@@ -28,7 +28,7 @@ public class SceneBuilder : MonoBehaviour {
     {
     	print (name);
 	GameObject instance = Instantiate (Resources.Load<GameObject> (name), spawnPoint.position, spawnPoint.rotation) as GameObject;
-	return spawnPoint; //instance.GetComponentsInChildren<ConnectorPoint>().;
+		return instance.GetComponentsInChildren<SceneContinuation>()[0].getSpawnPoint();
     }
 
 // Update is called once per frame
